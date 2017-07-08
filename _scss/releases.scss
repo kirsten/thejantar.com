@@ -1,0 +1,53 @@
+.recording-list-item {
+  margin: 40px 0 60px;
+}
+
+.album-art {
+  display: block;
+  max-width: 100%;
+}
+
+.album-title {
+  margin-top: 20px;
+}
+
+.album-details,
+.album-link {
+  font-size: .8em;
+}
+
+.album-link {
+  text-decoration: underline;
+}
+
+.track-listing {
+  margin-top: 10px;
+}
+
+.track-listing a {
+  font-weight: bold;
+}
+
+.track-listing a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 600px) {
+  .album-art,
+  .album-info {
+    float: left;
+  }
+
+  .album-art {
+    width: 360px;
+  }
+
+  .album-info {
+    margin-left: 20px;
+    width: calc(100% - 380px);
+  }
+
+  .album-title {
+    margin-top: 10px;
+  }
+}

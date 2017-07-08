@@ -1,0 +1,30 @@
+.show-list {
+  margin: 20px 0;
+
+  li {
+    margin: 10px 0;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .date,
+  .show-details {
+    display: block;
+  }
+}
+
+@media (min-width: 600px) {
+  .show-list {
+    .date {
+      float: left;
+      width: 180px;
+    }
+
+    .show-details {
+      float: left;
+      width: calc(100% - 200px);
+    }
+  }
+}
