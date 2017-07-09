@@ -4,6 +4,7 @@ label: MIE
 link: "http://mie.limitedrun.com/products/582306-jantar-panisperna"
 date: 2017-01-20
 compilation: false
+image: /assets/img/panisperna.jpg
 tracks:
   - name: "Born Without Bones"
   - name: "Humble Moths"
