@@ -2,8 +2,8 @@
 layout: default
 ---
 
-{% assign records = site.releases | where: "compilation", "false" %}
-{% assign compilations = site.releases | where: "compilation", "true" %}
+{% assign records = site.releases | where: "compilation", "false" | sort: "date" | reverse %}
+{% assign compilations = site.releases | where: "compilation", "true" | sort: "date" | reverse %}
 
 <header class="section-header">
   <h2>Releases</h2>
