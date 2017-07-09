@@ -11,11 +11,11 @@ collections:
     folder: "_releases"
     create: true
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Label", name: "label", widget: "string" }
+      - { label: "Album Title", name: "title", widget: "string" }
       - { label: "Link", name: "link", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Record Label", name: "label", widget: "string" }
+      - { label: "Release Date", name: "date", widget: "datetime" }
       - { label: "Compilation?", name: "compilation", widget: "boolean" }
-      - { label: "Album Cover", name: "image", widget: "image" }
+      - { label: "Album Cover", name: "cover_image", widget: "image" }
 
