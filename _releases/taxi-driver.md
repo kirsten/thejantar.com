@@ -1,0 +1,17 @@
+---
+title: Taxi Driver
+label: SLSC
+link: "http://recall.artinoddplaces.org/artists/jantar-2/"
+date: 2015-10-01
+compilation: false
+tracks:
+  - name: "Prelude II (Main Title)"
+  - name: "Thank God for the Rain"
+  - name: "Illume"
+  - name: "Screwhead I"
+  - name: "Screwhead II"
+  - name: "Eight Spaces"
+  - name: "End Credits"
+  - name: "Iris Variation"
+    link: "https://soundcloud.com/slscr/iris-variation"
+---

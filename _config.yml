@@ -5,3 +5,7 @@ markdown:     kramdown
 
 sass:
   sass_dir: _scss
+
+collections:
+  releases:
+    output: false

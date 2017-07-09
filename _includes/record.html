@@ -1,0 +1,25 @@
+<li class="recording-list-item clear">
+  <a href="">
+  </a>
+  <div class="album-info">
+    <a href="{{ record.link }}" target="_blank">
+      <h3>{{ record.title }}</h3>
+    </a>
+    {% if record.description %}
+      <div class="album-details">{{ record.description }}</div>
+    {% endif %}
+    <a class="album-details" href="{{ record.link }}">
+      {% if record.label %}{{ record.label | append: ", " }}{% endif %}
+      {{ record.date | date: "%Y" }}
+    </a>
+    <ol class="track-listing">
+    {% for track in record.tracks %}
+      {% if track.link %}
+        <li><a href="{{ track.link }}" target="_blank">{{ track.name }}</a></li>
+      {% else %}
+        <li>{{ track.name }}</li>
+      {% endif %}
+    {% endfor %}
+    </ol>
+  </div>
+</li>
