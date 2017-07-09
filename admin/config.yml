@@ -3,12 +3,12 @@ backend:
   repo: kirsten/thejantar.com
   branch: master
 
-media_folder: "assets/img/uploads"
+media_folder: "assets/img"
 
 collections:
   - name: "releases"
     label: "Releases"
-    folder: "_releases/"
+    folder: "_releases"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
