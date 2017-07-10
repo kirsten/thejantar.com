@@ -1,7 +1,7 @@
 ---
 title: Suit Withers
 link: http://thesunview.org/jantar-iv
-label: SLSC
+label: SLSCR
 date: 2015-04-17
 compilation: false
 cover_image: /assets/img/suit-withers.jpg
