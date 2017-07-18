@@ -3,7 +3,7 @@ layout: default
 title: Shows
 ---
 
-{% assign upcoming_shows = site.data.shows | where_exp: "show", "show.date >= site.time" %}
+{% assign upcoming_shows = site.data.shows | where_exp: "show", "show.date >= site.time" | reverse %}
 {% assign past_shows = site.data.shows | where_exp: "show", "show.date < site.time" %}
 
 <header class="section-header">
