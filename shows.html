@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Shows
 ---
 
 {% assign upcoming_shows = site.data.shows | where_exp: "show", "show.date >= site.time" %}

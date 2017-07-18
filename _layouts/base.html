@@ -3,7 +3,14 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <title>{{ page.title }}</title>
+    <title>
+    {% if page.layout == 'home' %}
+      {{ site.title }}
+    {% else %}
+      {{ site.title }} | {{ page.title }}
+    {% endif %}
+    </title>
+    <meta name="description" content="{{ site.description }}">
     <link rel="stylesheet" type="text/css" href="{{ site.github.url }}/style.css">
   </head>
   <body class="{{ page.layout }}">
