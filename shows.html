@@ -7,10 +7,6 @@ title: Shows
 {% assign past_shows = site.data.shows | where_exp: "show", "show.date < site.time" %}
 
 {% if upcoming_shows.size > 0 %}
-  <h1>LOL</h1>
-{% endif %}
-
-{% if upcoming_shows.size > 0 %}
   <header class="section-header">
     <h2>Upcoming Shows</h2>
   </header>
