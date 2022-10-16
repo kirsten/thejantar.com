@@ -1,6 +1,6 @@
 ---
 title: 'Youarehere: The Maze Mixtape'
-link: 'http://www.wordsplusdrea.ms/p/wd010-youarehere-maze-mixtape.html'
+link: 'https://wordsplusdreams.bandcamp.com/album/youarehere-the-maze-mixtape'
 label: Words+Dreams
 date: 2012-07-20T00:00:00.000Z
 compilation: true
