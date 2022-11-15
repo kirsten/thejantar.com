@@ -10,5 +10,33 @@
   <body>
     <!-- Include the script that builds the page and powers Netlify CMS -->
     <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+    <script>
+      CMS.registerPreviewStyle("/style.css");
+    </script>
+
+    <script>
+      const AlbumPreview = createClass({
+        render: function() {
+          const album = this.props.entry;
+          const imagePath = album.getIn(['data', 'cover_image']);
+          const coverImage = this.props.getAsset(imagePath);
+          const label = album.getIn(['data', 'label']);
+          const date = album.getIn(['data', 'date']).slice(0, 4);
+          const labelAndReleaseDate = label ? `${label}, ${date}` : date;
+          const tracks = album.getIn(['data', 'tracks']);
+
+          return h('div', { className: 'container' } ,
+            h('img', { className: 'album-art', src: coverImage.toString() }),
+            h('div', { className: 'album-info' },
+              h('h3', { className: 'album-title' }, album.getIn(['data', 'title'])),
+              h('div', { className: 'album-details' }, album.getIn(['data', 'description'])),
+              h('a', { className: 'album-details' }, labelAndReleaseDate),
+            ),
+          );
+        },
+      });
+
+      CMS.registerPreviewTemplate("releases", AlbumPreview);
+    </script>
   </body>
 </html>
