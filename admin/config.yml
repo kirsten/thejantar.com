@@ -20,4 +20,10 @@ collections:
       - { label: "Release Date", name: "date", widget: "datetime" }
       - { label: "Compilation?", name: "compilation", widget: "boolean", default: false }
       - { label: "Album Cover", name: "cover_image", widget: "image" }
+      - label: "Tracks"
+        name: "tracks"
+        widget: "list"
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Link", name: "link", widget: "string", required: false }
 
