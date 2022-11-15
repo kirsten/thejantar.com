@@ -14,17 +14,6 @@
     li {
       display: block;
     }
-
-    a {
-      -webkit-transition: color .3s, background-color .3s;
-      transition: color .3s, background-color .3s;
-
-      &:hover {
-        border: 1px solid $text-color;
-        background-color: $text-color;
-        color: $background-color;
-      }
-    }
   }
 }
 
