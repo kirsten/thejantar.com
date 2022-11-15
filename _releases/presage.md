@@ -3,7 +3,7 @@ title: Presage
 link: http://mie.limitedrun.com/products/552550-black-dirt-oak-jantar-presage-12
 description: Split with Black Dirt Oak
 label: MIE
-date: 2015-06-15T00:00:00.000Z
+date: 2015-06-15
 compilation: false
 cover_image: /assets/img/presage.jpg
 tracks:
