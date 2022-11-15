@@ -31,6 +31,11 @@
               h('h3', { className: 'album-title' }, album.getIn(['data', 'title'])),
               h('div', { className: 'album-details' }, album.getIn(['data', 'description'])),
               h('a', { className: 'album-details' }, labelAndReleaseDate),
+              h('ol', { className: 'track-listing' },
+                this.props.widgetsFor('tracks').map((track) => {
+                  return h('li', {}, track.getIn(['data', 'name']));
+                }),
+              ),
             ),
           );
         },
