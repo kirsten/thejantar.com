@@ -1,14 +1,47 @@
 <!doctype html>
 <html>
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Content Manager</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content Manager</title>
+    <!-- Include the identity widget -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <!-- Include the script that builds the page and powers Netlify CMS -->
+    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+    <script>
+      CMS.registerPreviewStyle("/style.css");
+    </script>
 
-  <link rel="stylesheet" href="https://unpkg.com/netlify-cms@~0.4/dist/cms.css" />
+    <script>
+      const AlbumPreview = createClass({
+        render: function() {
+          const album = this.props.entry;
+          const imagePath = album.getIn(['data', 'cover_image']);
+          const coverImage = this.props.getAsset(imagePath);
+          const label = album.getIn(['data', 'label']);
+          const date = album.getIn(['data', 'date']).slice(0, 4);
+          const labelAndReleaseDate = label ? `${label}, ${date}` : date;
+          const tracks = album.getIn(['data', 'tracks']);
 
-</head>
-<body>
-  <script src="https://unpkg.com/netlify-cms@~0.4/dist/cms.js"></script>
-</body>
+          return h('div', { className: 'container' } ,
+            h('img', { className: 'album-art', src: coverImage.toString() }),
+            h('div', { className: 'album-info' },
+              h('h3', { className: 'album-title' }, album.getIn(['data', 'title'])),
+              h('div', { className: 'album-details' }, album.getIn(['data', 'description'])),
+              h('a', { className: 'album-details' }, labelAndReleaseDate),
+              h('ol', { className: 'track-listing' },
+                this.props.widgetsFor('tracks').map((track) => {
+                  return h('li', {}, track.getIn(['data', 'name']));
+                }),
+              ),
+            ),
+          );
+        },
+      });
+
+      CMS.registerPreviewTemplate("releases", AlbumPreview);
+    </script>
+  </body>
 </html>
