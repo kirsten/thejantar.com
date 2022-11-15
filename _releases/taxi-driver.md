@@ -1,6 +1,7 @@
 ---
 title: Taxi Driver
 link: http://recall.artinoddplaces.org/artists/jantar-2/
+description: test
 label: SLSCR
 date: 2015-10-01
 compilation: false
