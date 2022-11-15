@@ -7,22 +7,11 @@ title: Videos
   <h2>Videos</h2>
 </header>
 
-<h3>The Profane Mountain Orb</h3>
-<div class="video">
-  <iframe src="https://player.vimeo.com/video/756267431?h=37c5c2c626" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-</div>
+{% assign videos = site.data.videos.video_list %}
 
-<h3>New Fête Galante Blues</h3>
+{% for video in videos %}
+<h3>{{ video.title }}</h3>
 <div class="video">
-  <iframe src="https://www.youtube.com/embed/KrnI48Q3u5I" frameborder="0" allowfullscreen=""></iframe>
+  <iframe src={{ video.url }} width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 </div>
-
-<h3>Una Serata Commercial</h3>
-<div class="video">
-  <iframe title="vimeo-player" src="https://player.vimeo.com/video/131795563?h=af064cfc82" width="640" height="360" frameborder="0" allowfullscreen></iframe>
-</div>
-
-<h3>Prelude to a Body in Pieces</h3>
-<div class="video">
-  <iframe title="vimeo-player" src="https://player.vimeo.com/video/124781770?h=39b4e1cf99" width="640" height="360" frameborder="0" allowfullscreen></iframe>
-</div>
+{% endfor %}
