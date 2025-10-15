@@ -1,5 +1,15 @@
 show_list:
-  - date:  2024-10-25 19:00:00
+  - date: 2025-10-24 19:00:00
+    title: "Sunview Acropolis w/ Wednesday Knudsen"
+
+  - date: 2025-09-06 18:00:00
+    title: "Flowers Festival, Essex Flowers"
+    link: https://essexflowers.us/FLOWERS-FESTIVAL-2025
+
+  - date: 2025-04-06 18:00:00
+    title: "Sunview Luncheonette w/ Jaye Bartell"
+
+  - date: 2024-10-25 19:00:00
     title: "Background Moods, Sunview Luncheonette"
 
   - date:  2024-07-21 15:00:00
