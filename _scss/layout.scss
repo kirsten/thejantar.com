@@ -1,3 +1,5 @@
+@use 'variables';
+
 .container {
   padding: 40px;
   max-width: 960px;
@@ -20,7 +22,7 @@
   }
 
   a {
-    border: 1px solid $text-color;
+    border: 1px solid variables.$text-color;
     font-style: normal;
     font-size: 1em;
     font-weight: 700;
@@ -30,9 +32,9 @@
     transition: color .3s, background-color .3s;
 
     &:hover {
-      border: 1px solid $text-color;
-      background-color: $text-color;
-      color: $background-color;
+      border: 1px solid variables.$text-color;
+      background-color: variables.$text-color;
+      color: variables.$background-color;
     }
   }
 }
